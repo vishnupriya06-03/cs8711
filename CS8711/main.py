@@ -5,7 +5,8 @@ app = Flask(__name__)
   
 @app.route('/', methods =["GET", "POST"])
 def index(): 
-    weatherData = ''
+  return render_template("hello world")
+    '''weatherData = ''
     error = 0
     cityName = ''
     if request.method == "POST":       
@@ -16,6 +17,6 @@ def index():
             weatherData = requests.get(url).json()
         else:
             error = 1    
-    return render_template('index.html', data = weatherData, cityName = cityName)
+    return render_template('index.html', data = weatherData, cityName = cityName)'''
 if __name__ == "__main__":
     app.run()
